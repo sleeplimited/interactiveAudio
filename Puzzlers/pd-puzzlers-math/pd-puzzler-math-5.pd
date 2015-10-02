@@ -1,0 +1,28 @@
+#N canvas 213 84 698 300 10;
+#X obj 20 86 cnv 15 280 120 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 56 45 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 53 64 5 0 0 0 - - -;
+#X text 37 44 0;
+#X text 190 44 127;
+#X obj 56 235 hsl 128 15 -50 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 246 235 hsl 128 15 100 0 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 189 233 50;
+#X text 29 233 -50;
+#X floatatom 53 214 5 0 0 0 - - -;
+#X floatatom 243 214 5 0 0 0 - - -;
+#X text 219 233 100;
+#X text 379 233 0;
+#X text 307 100 the slider at the top has a range of (0-127). take
+its output and make it control both of the bottom two sliders. along
+the way \, adjust it so that the data matches the new ranges (-50-50)
+and (100-0).;
+#X text 307 170 once you get it \, all three sliders will move together!
+;
+#X text 307 80 pd puzzler math-5:;
+#X connect 1 0 2 0;
+#X connect 9 0 5 0;
+#X connect 10 0 6 0;

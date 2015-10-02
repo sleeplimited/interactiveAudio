@@ -1,0 +1,81 @@
+#N canvas 180 95 1736 984 10;
+#X text 22 11 //Assignment 1;
+#X obj -47 272 soundfiler;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array arrayA 475648 float 2;
+#X coords 0 1 475648 -1 200 140 1;
+#X restore 549 58 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array arrayE 473600 float 2;
+#X coords 0 1 473600 -1 200 140 1;
+#X restore 550 231 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array arrayC# 477184 float 2;
+#X coords 0 1 477184 -1 200 140 1;
+#X restore 550 399 graph;
+#X obj -166 65 bng 100 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -46 379 tabplay~ arrayA;
+#X obj -47 351 tabplay~ arrayE;
+#X obj -166 380 tabplay~ arrayC#;
+#X obj -166 545 dac~;
+#X msg -9 180 read -resize e5.aiff arrayE;
+#X text 157 386 Korg Mono-Poly - Large Thing Â» Korg Mono-Poly -
+Large Thing - E5 (Large Thing-76-127.aif) by modularsamples from freesound.org
+;
+#X text 159 425 Korg Mono-Poly - Large Thing Â» Korg Mono-Poly -
+Large Thing - C#5 (Large Thing-73-127.aif) by modularsamples from freesound.org
+;
+#X msg -10 201 read -resize c-5.aiff arrayC#;
+#X text 160 466 Korg Mono-Poly - Large Thing Â» Korg Mono-Poly -
+Large Thing - A4 (Large Thing-69-127.aif) by modularsamples from freesound.org
+;
+#X msg -9 158 read -resize a4.aiff arrayA;
+#X text 161 507 Korg Mono-Poly - Large Thing Â» Korg Mono-Poly -
+Large Thing - A5 (Large Thing-81-127.aif) by modularsamples from freesound.org
+;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array arrayA5 475648 float 2;
+#X coords 0 1 475648 -1 200 140 1;
+#X restore 550 570 graph;
+#X msg -8 229 read -resize a5.aiff arrayA5;
+#X obj -166 206 t b b;
+#X obj -188 359 tabplay~ arrayA5;
+#X text -505 121 I feel this whole structure would need an 'if then'
+statement in order for this to not be choppy when first playing the
+files.;
+#X text 192 102 ------------------------>;
+#X obj 351 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 372 103 Then \, press this button.;
+#X text 340 124 ----------------->;
+#X obj 460 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -17 81 I wanted you to only have to press one button. If you
+want to press two buttons and not hear any choppiness feel free to
+press this button.;
+#X connect 5 0 19 0;
+#X connect 6 0 9 1;
+#X connect 7 0 9 1;
+#X connect 8 0 9 0;
+#X connect 10 0 1 0;
+#X connect 13 0 1 0;
+#X connect 15 0 1 0;
+#X connect 18 0 1 0;
+#X connect 19 0 20 0;
+#X connect 19 0 8 0;
+#X connect 19 0 7 0;
+#X connect 19 0 6 0;
+#X connect 19 1 15 0;
+#X connect 19 1 10 0;
+#X connect 19 1 13 0;
+#X connect 19 1 18 0;
+#X connect 20 0 9 0;
+#X connect 23 0 15 0;
+#X connect 23 0 10 0;
+#X connect 23 0 13 0;
+#X connect 23 0 18 0;
+#X connect 26 0 7 0;
+#X connect 26 0 6 0;
+#X connect 26 0 20 0;
+#X connect 26 0 8 0;

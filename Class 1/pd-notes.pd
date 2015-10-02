@@ -1,0 +1,24 @@
+#N canvas 684 95 682 673 10;
+#X text 53 31;
+#X text 79 61 This is a comment - ctrl 5;
+#X obj 74 130 dac~;
+#X obj 108 130 int;
+#X obj 135 130 osc~;
+#X obj 215 162 5;
+#X obj 271 146 moses 10;
+#X text 349 147 These are objects \; There can be audio objects \,
+objects with inlets / outlets or both;
+#X msg 104 215 123;
+#X text 195 230 These are messages;
+#X msg 138 216 cat;
+#X obj 86 308 print;
+#X text 134 308 One of our debugging tools. Prints the incoming data
+to the console;
+#X floatatom 86 365 5 -12 12 0 - - -;
+#X text 131 374 number box (another ui element). in performance mode
+\, drag up/down to raise or lower value. Shift-drag for fine adjustment.
+click once \, type value \, hit return.;
+#X obj 81 422 print;
+#X connect 8 0 11 0;
+#X connect 10 0 11 0;
+#X connect 13 0 15 0;

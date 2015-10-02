@@ -1,0 +1,51 @@
+#N canvas 98 87 791 630 24;
+#X text 48 17 //variables;
+#X floatatom 55 84 5 0 0 0 - - -;
+#X text 127 84 isn't a number box a variable?;
+#X obj 56 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 55 125 5 0 0 0 - - -;
+#X text 54 179 how do we store a number?;
+#X obj 57 229 int;
+#X text 110 226 store an integer;
+#X obj 57 263 float;
+#X text 172 262 store a float;
+#X obj 128 263 f;
+#X obj 58 423 int;
+#X floatatom 88 385 5 0 0 0 - - -;
+#X floatatom 58 458 5 0 0 0 - - -;
+#X text 150 384 set value with right inlet;
+#X obj 58 369 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 88 323 metro 50;
+#X obj 88 304 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 88 355 random 99;
+#X msg 109 296 stop;
+#X obj 54 539 int;
+#X floatatom 84 501 5 0 0 0 - - -;
+#X floatatom 54 574 5 0 0 0 - - -;
+#X obj 54 507 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 121 569 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 164 514 5 0 0 0 - - -;
+#X obj 164 547 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 332 483 f;
+#X floatatom 332 442 5 0 0 0 - - -;
+#X connect 1 0 4 0;
+#X connect 3 0 1 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 1;
+#X connect 15 0 11 0;
+#X connect 16 0 18 0;
+#X connect 17 0 16 0;
+#X connect 18 0 12 0;
+#X connect 19 0 16 0;
+#X connect 20 0 22 0;
+#X connect 20 0 24 0;
+#X connect 21 0 20 0;
+#X connect 23 0 20 0;
+#X connect 25 0 26 0;
+#X connect 28 0 27 0;

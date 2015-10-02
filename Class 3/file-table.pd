@@ -1,0 +1,34 @@
+#N canvas 0 95 1366 673 16;
+#X obj 58 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 58 90 openpanel;
+#X msg 58 140 read -resize \$1 fileTable;
+#X obj 58 194 soundfiler;
+#X obj 413 63 table fileTable;
+#X obj 126 328 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 126 358 tabplay~ fileTable;
+#X obj 125 405 dac~;
+#X obj 409 233 tabread4~ fileTable;
+#X text 622 237 //expecting the sample number to rea \, streamed from
+an audio rate connection;
+#X obj 410 295 dac~;
+#X obj 409 172 line~;
+#X msg 409 118 0;
+#X msg 454 118 88200 2000;
+#X text 617 285 //think of tabread4~ as a variable playhead;
+#X text 617 385 //you can use a text editor to create objects within
+I think that this is pretty sweet!
+#X msg 575 119 160000;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 0 7 1;
+#X connect 8 0 10 0;
+#X connect 8 0 10 1;
+#X connect 11 0 8 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 15 0 11 0;

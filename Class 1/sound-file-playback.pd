@@ -1,0 +1,32 @@
+#N canvas 0 95 683 673 10;
+#X text 40 27 //playback of an audio file;
+#X text 44 56 we need a place to store a big list of numbers (array)
+;
+#X text 45 84 An array is an ordered collection of objects (numbers
+in our case);
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array sampleArray 7.1392e+06 float 2;
+#X coords 0 1 7.1392e+06 -1 200 140 1;
+#X restore 204 136 graph;
+#X obj 76 337 soundfiler;
+#X text 147 331 takes a file path \, decodes ? the audio file type
+\, and loads the contents into the array argument provided;
+#X text 154 365 AIF or WAV files only \, thank you;
+#X msg 80 305 read -resize stones.aif sampleArray;
+#X floatatom 76 380 5 0 0 0 - - -;
+#X obj 74 436 tabplay~ sampleArray;
+#X text 205 437 plays through the given table (array) name provided.
+takes a bang as an inlet to start playback. to stop \, send a message
+with stop in it;
+#X obj 74 407 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 107 409 stop;
+#X obj 72 490 dac~;
+#X obj 105 362 print;
+#X connect 4 0 8 0;
+#X connect 4 0 14 0;
+#X connect 7 0 4 0;
+#X connect 9 0 13 0;
+#X connect 9 0 13 1;
+#X connect 11 0 9 0;
+#X connect 12 0 9 0;

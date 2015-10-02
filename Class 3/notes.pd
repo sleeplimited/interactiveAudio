@@ -1,0 +1,32 @@
+#N canvas 684 95 682 673 16;
+#X obj 99 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 99 90 openpanel;
+#X obj 143 135 print;
+#X msg 99 181 read -resize \$1 sampleTable;
+#X obj 99 255 soundfiler;
+#X text 386 182 //in a message \, the \$1 takes the first (1) incoming
+value and slips it into the message;
+#X obj 219 400 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 219 433 tabplay~ sampleTable;
+#X obj 389 108 table sampleTable;
+#X obj 220 474 dac~;
+#X floatatom 427 281 5 0 0 0 - - -;
+#X msg 511 278 dog;
+#X msg 572 281 cat;
+#X obj 503 324 symbol;
+#X msg 430 366 \$1-hello;
+#X obj 445 408 print;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 7 0 9 1;
+#X connect 10 0 14 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;

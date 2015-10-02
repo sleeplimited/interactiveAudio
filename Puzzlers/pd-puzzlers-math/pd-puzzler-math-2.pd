@@ -1,0 +1,30 @@
+#N canvas 211 99 598 292 10;
+#X obj 20 86 cnv 15 180 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X floatatom 35 59 5 0 0 0 - - -;
+#X floatatom 35 197 5 0 0 0 - - -;
+#N canvas 436 152 285 204 generator 0;
+#X obj 47 137 outlet;
+#X obj 47 26 loadbang;
+#X obj 47 81 random 100;
+#X obj 104 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 125 25 stop;
+#X obj 47 56 metro 50;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X restore 35 36 pd generator;
+#X text 208 80 pd puzzler math-2:;
+#X obj 133 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 208 100 the generator at the top is making numbers very quickly.
+i want the value at the bottom to update *only* when i push the 'bang'
+button at the top.;
+#X obj 37 116 int;
+#X connect 1 0 7 1;
+#X connect 3 0 1 0;
+#X connect 5 0 7 0;
+#X connect 7 0 2 0;

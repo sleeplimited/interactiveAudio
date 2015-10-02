@@ -1,0 +1,17 @@
+#N canvas 83 135 628 294 10;
+#X obj 30 63 cnv 15 180 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X floatatom 45 36 5 0 0 0 - - -;
+#X floatatom 45 175 5 0 0 0 - - -;
+#X text 218 57 pd puzzler math-0:;
+#X text 218 77 calculate the inverse of the number at the top (for
+example: the inverse of 4 is 1/4). the result should update whenever
+the upper number box changes.;
+#X msg 45 89 1;
+#X obj 45 112 /;
+#X obj 45 66 t b f;
+#X connect 1 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 1;

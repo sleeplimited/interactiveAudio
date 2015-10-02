@@ -1,0 +1,16 @@
+#N canvas 0 95 683 673 10;
+#X obj 20 86 cnv 15 180 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X floatatom 35 59 5 0 0 0 - - -;
+#X floatatom 35 197 5 0 0 0 - - -;
+#X text 208 80 pd puzzler math-4:;
+#X text 208 100 the slider at the top generates floating point values.
+round those values to the nearest integer.;
+#X obj 38 38 hsl 128 15 0 12 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 35 92 + 0.5;
+#X obj 35 124 int;
+#X connect 1 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 2 0;

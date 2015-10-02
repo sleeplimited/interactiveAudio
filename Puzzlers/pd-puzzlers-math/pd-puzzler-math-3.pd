@@ -1,0 +1,24 @@
+#N canvas 684 95 682 673 10;
+#X obj 26 54 cnv 15 180 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X floatatom 41 165 5 0 0 0 - - -;
+#X text 214 48 pd puzzler math-3:;
+#X obj 41 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 214 68 make a counter that counts from 1 to 10 \, then cycles
+by itself back to 1 the 'bang' at the top should step to the next value.
+;
+#X msg 74 54 0;
+#X obj 39 64 int;
+#X obj 72 76 + 1;
+#X floatatom 39 96 5 0 0 0 - - -;
+#X obj 37 118 % 10;
+#X obj 40 142 + 1;
+#X connect 3 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 1 0;

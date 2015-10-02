@@ -1,0 +1,17 @@
+#N canvas 0 95 1366 673 16;
+#X obj 19 25 tabplay~;
+#X obj 19 66 noise~;
+#X obj 152 186 phasor~;
+#X text 146 74 //these make noise;
+#X obj 156 406 bp~ 100 10;
+#X text 241 184 //cycle through its phase (normalized) 0.0-1.0;
+#X obj 153 234 *~ 2;
+#X obj 152 271 -~ 1;
+#X obj 156 477 dac~;
+#X obj 268 340 svf~ 500 0.5;
+#X text 401 338 //arg1: cutoff frequency \, arg2: q (normalized 0.0-1.0)
+;
+#X text 398 360 //out: lpf \, bpf \, brf \, hpf;
+#X connect 2 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;

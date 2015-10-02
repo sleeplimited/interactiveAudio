@@ -1,0 +1,7 @@
+#N canvas 0 95 1366 673 16;
+#N canvas 658 127 450 300 sample-loading 0;
+#X obj 90 61 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 89 98 openpanel;
+#X obj 84 14 table sampletable;
+#X restore 61 210 pd sample-loading;

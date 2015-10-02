@@ -1,0 +1,16 @@
+#N canvas 211 99 598 292 10;
+#X obj 20 86 cnv 15 180 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X floatatom 35 59 5 0 0 0 - - -;
+#X floatatom 85 59 5 0 0 0 - - -;
+#X floatatom 35 238 5 0 0 0 - - -;
+#X obj 35 194 +;
+#X obj 35 214 +;
+#X floatatom 135 59 5 0 0 0 - - -;
+#X text 208 80 pd puzzler math-1:;
+#X text 208 100 i would like to add the three number boxes together
+so that when any of the boxes are changed \, the sum is updated below.
+;
+#X obj 47 101 t b f;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;

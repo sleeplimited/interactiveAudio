@@ -1,0 +1,35 @@
+#N canvas 64 37 1010 580 24;
+#X text 61 5 this is a comment - press command-5 to place one;
+#X obj 64 109 +;
+#X floatatom 64 58 5 0 0 0 - - -;
+#X floatatom 139 57 5 0 0 0 - - -;
+#X floatatom 64 142 5 0 0 0 - - -;
+#X text 119 105 why doesn't the right number box make it change?;
+#X obj 64 209 dac~;
+#X obj 129 209 int;
+#X obj 183 209 osc~;
+#X obj 245 209 5;
+#X obj 293 209 moses 10;
+#X text 401 196 these are objects. there can be audio objects \, control
+objects \, objects with inlets / outlets or both;
+#X msg 65 292 123;
+#X text 178 289 these are messages. press command-e to toggle between
+editing and performance mode;
+#X msg 122 292 cat;
+#X obj 65 350 print;
+#X text 141 348 one of our debugging tools. prints the incoming data
+to the console;
+#X floatatom 67 420 5 0 0 0 - - -;
+#X text 157 416 number box (another ui element). in performance mode
+\, drag up / down to raise or lower value. shift-drag for fine adjusment.
+click once \, type value \, hit return.;
+#X obj 67 497 print;
+#X obj 63 243 kevin;
+#X text 132 242 doesn't exist! (typo?);
+#X obj 361 245 osc;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 12 0 15 0;
+#X connect 14 0 15 0;
+#X connect 17 0 19 0;

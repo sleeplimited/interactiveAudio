@@ -1,0 +1,42 @@
+#N canvas 406 95 959 672 16;
+#N canvas 41 197 1019 649 level-control 0;
+#X restore -329 125 pd level-control;
+#X obj -139 40 loadbang;
+#X obj -140 261 soundfiler;
+#X msg -73 191 read -resize sine-220.wav sine-220;
+#X obj 326 91 table sine-220;
+#X msg -72 154 read -resize saw-110.wav saw-110;
+#X obj 323 122 table saw-110;
+#X obj -296 606 dac~;
+#X obj -269 518 line~;
+#X text -198 520 //ramp our gain value (per sample~) to the desired
+target;
+#X obj -202 369 tabplay~ saw-110;
+#X obj -296 252 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -296 562 *~;
+#X obj -301 341 tabplay~ sine-220;
+#X msg -187 447 0.8 30;
+#X text -179 692 'when the carnival comes ...wav by BoilingSand from
+Freesound.org;
+#X obj -46 431 tabplay~ carnival1;
+#X msg -48 219 read -resize when-the-carnival-1.wav carnival1;
+#X obj 319 158 table carnival1;
+#X obj -49 388 delay 2000;
+#X connect 1 0 3 0;
+#X connect 1 0 5 0;
+#X connect 1 0 17 0;
+#X connect 3 0 2 0;
+#X connect 5 0 2 0;
+#X connect 8 0 12 1;
+#X connect 10 0 12 0;
+#X connect 11 0 19 0;
+#X connect 11 0 13 0;
+#X connect 12 0 7 0;
+#X connect 12 0 7 1;
+#X connect 13 0 12 0;
+#X connect 13 1 10 0;
+#X connect 14 0 8 0;
+#X connect 16 0 12 0;
+#X connect 17 0 2 0;
+#X connect 19 0 16 0;

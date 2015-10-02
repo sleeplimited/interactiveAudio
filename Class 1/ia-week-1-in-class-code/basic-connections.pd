@@ -1,0 +1,36 @@
+#N canvas 115 136 846 551 24;
+#X text 39 11 //pd basic connections;
+#X floatatom 92 104 5 0 0 0 - - -;
+#X floatatom 158 105 5 0 0 0 - - -;
+#X obj 92 142 +;
+#X text 238 75 connect the outlets of number boxes to the inlets of
+the [+] object;
+#X floatatom 92 178 5 0 0 0 - - -;
+#X text 239 146 objects have a 'hot' inlet \, and one (or more) 'cold'
+inlets. (almost?) always the leftmost inlet.;
+#X msg 92 63 bang;
+#X obj 153 59 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 41 104 13;
+#X obj 92 276 +;
+#X floatatom 92 228 5 0 0 0 - - -;
+#X msg 156 227 13;
+#X floatatom 92 315 5 0 0 0 - - -;
+#X floatatom 95 374 5 0 0 0 - - -;
+#X obj 95 410 + 13;
+#X floatatom 95 449 5 0 0 0 - - -;
+#X text 158 409 adding a default argument;
+#X floatatom 168 374 5 0 0 0 - - -;
+#X text 237 374 override the default argument;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 9 0 3 0;
+#X connect 10 0 13 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 1;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 18 0 15 1;
