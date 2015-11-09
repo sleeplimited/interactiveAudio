@@ -1,0 +1,38 @@
+Rachael Carlson
+Interactive Audio FALL 2015
+Final Project Proposal
+
+Before I begin this proposal I would like to note that this proposal is
+contingent upon the ability to actually have the objects that I have
+in mind for this composition.  If these objects are not available to
+me I will need to figure out a different project.
+
+1. Concisely describe your final project
+My final project will be a composition/performance for Acoustic Guitar
+and multi-channel effects such as reverb, chorus, delay, flange,
+octavation, etc.  I would like to be able to dynamically control these
+effects in real-time.  
+
+2. Provide details about the audio generation / manipulation.
+An adc~ object will receive the audio signal coming from the acoustic
+guitar.  This signal will be routed to various effects that will be
+created in pd.  These various effects will manipulate the signal
+through ctrlin objects which will be connected to control interfaces
+in the real-world which will hopefully be manipulate through the feet
+or other non-arm appendages.
+
+3. Provide details about the user interaction.
+I believe that the use of MIDI or OSC will allow me to control these
+effects.  I imagine that an expression pedal or some other such this
+is available that would interface with the user in such a way that it
+could control such variables as reverb space, chorus depth, or delay
+time.
+
+4. List any external hardware (excluding a stereo speaker setup)
+required.
+  - 4-8 speakers
+  - An interface which can handle 4-8 output channels
+  - Some sort of machine which will allow the user to interface with
+    the control variables of PD.
+  - An acoustic guitar with the ability to output a clean quality
+    signal (I can supply this)

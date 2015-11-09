@@ -1,0 +1,67 @@
+#N canvas 632 302 713 329 10;
+#X obj 45 340 dac~;
+#X obj 45 287 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 20 47 cnv 15 240 160 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 43 18 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 22 450 300 beep 0;
+#X obj 152 42 inlet;
+#X obj 84 153 *~;
+#X obj 152 136 line~;
+#X msg 202 112 0 5;
+#X obj 152 64 t b b;
+#X obj 84 176 outlet~;
+#X msg 152 112 0.5 5;
+#X obj 84 97 osc~ 400;
+#X obj 202 85 delay 80;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 6 0;
+#X connect 4 1 8 0;
+#X connect 6 0 2 0;
+#X connect 7 0 1 0;
+#X connect 8 0 3 0;
+#X restore 45 311 pd beep;
+#X text 268 100 play the beep at the bottom exactly 10 times \, each
+time increasing the time between beeps by 100ms. be sure to stop playing
+after the 10th beep.;
+#X text 268 150 the [bang] at the top should restart the sequence of
+10 beeps each time it is pressed.;
+#X text 268 80 pd puzzler playback-1:;
+#X obj 49 48 delay 100;
+#X obj 55 71 delay 200;
+#X obj 62 94 delay 300;
+#X obj 68 117 delay 400;
+#X obj 73 140 delay 500;
+#X obj 78 161 delay 600;
+#X obj 83 184 delay 700;
+#X obj 89 208 delay 800;
+#X obj 94 232 delay 900;
+#X text 111 14 //I'm not all that proud of this. It is simple but cluttered
+and not very extensible.;
+#X connect 1 0 4 0;
+#X connect 3 0 1 0;
+#X connect 3 0 8 0;
+#X connect 4 0 0 0;
+#X connect 4 0 0 1;
+#X connect 8 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 1 0;
+#X connect 10 0 11 0;
+#X connect 11 0 1 0;
+#X connect 11 0 12 0;
+#X connect 12 0 1 0;
+#X connect 12 0 13 0;
+#X connect 13 0 1 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 0;
+#X connect 14 0 15 0;
+#X connect 15 0 1 0;
+#X connect 15 0 16 0;
+#X connect 16 0 1 0;

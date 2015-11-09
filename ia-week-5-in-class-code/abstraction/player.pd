@@ -1,0 +1,117 @@
+#N canvas 137 34 1020 603 10;
+#X obj 81 222 random;
+#X obj 54 529 dac~;
+#X obj 54 497 *~;
+#X obj 81 451 line~;
+#X msg 137 419 1 10;
+#X obj 54 134 t b b;
+#X obj 54 198 t b b;
+#X obj 54 166 delay 50;
+#X obj 183 419 pack f f;
+#X msg 183 397 0;
+#X msg 108 279 \$1 4410;
+#X obj 81 254 t b f;
+#X msg 81 419 0 10;
+#X obj 81 397 delay 90;
+#X obj 196 65 \$0;
+#X floatatom 196 88 6 0 0 0 - - -;
+#X obj 196 43 loadbang;
+#X text 225 63 \$0 is this instance's unique ID number;
+#X obj 491 40 table \$0-sampleTable;
+#X obj 54 316 tabplay~ \$0-sampleTable;
+#X obj 99 142 r fadeOutTime;
+#X obj 228 396 r fadeOutTime;
+#X obj 421 314 print;
+#X obj 421 253 \$0;
+#X obj 421 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 624 127 450 300 tableLoading 0;
+#X obj 37 180 soundfiler;
+#X obj 37 34 loadbang;
+#X obj 37 92 \$0;
+#X obj 37 119 pack f s;
+#X msg 37 149 read -resize data/\$2 \$1-sampleTable;
+#X obj 114 92 symbol \$1;
+#X obj 37 62 t b b;
+#X obj 37 210 s \$0-sampleLength;
+#X connect 0 0 7 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 3 1;
+#X connect 6 0 2 0;
+#X connect 6 1 5 0;
+#X restore 491 63 pd tableLoading;
+#X obj 114 199 - 4410;
+#X obj 114 176 r \$0-sampleLength;
+#X obj 54 40 r theBigPlay;
+#X obj 54 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 54 102 metro \$2;
+#X text 628 40 //we name the table using a \$0 somewhere in the name
+so that when the patch is created \, the \$0 gets replaced with -this
+instance's- unique id number;
+#X msg 421 276 use-in-message-\$1;
+#X text 540 275 //remember: message's don't use the instance arguments
+\, but instead replace their $n with the incoming list data. so we
+just create an object box and initialize it as a [float] object using
+the instance argument.;
+#X text 628 90 //this means that each instance's [table] will be uniquely
+named and referenced!;
+#X obj 423 416 \$2;
+#X obj 408 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 893 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 579 198 a note about dollar $igns;
+#X obj 408 513 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 893 527 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 422 360 osc~ \$2;
+#X text 476 359 //when used in an object \, the $n gets replaced with
+the nth instance argument (look at the title bar to see the instance
+arguments);
+#X obj 454 416 123;
+#X text 485 416 //here we create a [f ] object using the \$2 \, in
+the same way we do with [123];
+#X obj 423 458 symbol \$1;
+#X obj 423 478 symbol dog;
+#X text 503 457 //our first argument is a 'symbol' (or string) \, so
+we must use the long-form version [symbol ...] to create the object
+;
+#X connect 0 0 11 0;
+#X connect 2 0 1 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 1;
+#X connect 4 0 3 0;
+#X connect 5 0 7 0;
+#X connect 5 1 9 0;
+#X connect 6 0 4 0;
+#X connect 6 1 0 0;
+#X connect 7 0 6 0;
+#X connect 8 0 3 0;
+#X connect 9 0 8 0;
+#X connect 10 0 19 0;
+#X connect 11 0 13 0;
+#X connect 11 1 10 0;
+#X connect 12 0 3 0;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 16 0 14 0;
+#X connect 19 0 2 0;
+#X connect 20 0 7 1;
+#X connect 21 0 8 1;
+#X connect 23 0 32 0;
+#X connect 24 0 23 0;
+#X connect 26 0 0 1;
+#X connect 27 0 26 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 5 0;
+#X connect 32 0 22 0;
+#X connect 36 0 37 0;
+#X connect 36 0 39 0;
+#X connect 37 0 40 0;
+#X connect 39 0 40 0;

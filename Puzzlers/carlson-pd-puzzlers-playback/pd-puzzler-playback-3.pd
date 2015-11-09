@@ -1,0 +1,47 @@
+#N canvas 820 414 559 399 10;
+#X obj 39 252 dac~;
+#X obj 20 56 cnv 15 160 100 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 48 33 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 1360 185 469 166 init 1;
+#X obj 35 40 loadbang;
+#X obj 35 103 soundfiler;
+#X obj 337 42 table \$0-sample;
+#X obj 35 61 \$0;
+#X obj 35 124 s sampleLength;
+#X obj 92 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 35 82 read -resize data/don't-walk.aif \$1-sample;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 3 0 6 0;
+#X connect 5 0 3 0;
+#X connect 6 0 1 0;
+#X restore 495 32 pd init;
+#X obj 39 220 tabplay~ \$0-sample;
+#X text 187 70 the [bang[ at the top triggers the [tabplay~] object
+to play the sound file speaking 'don't walk.';
+#X text 187 110 i want the [tabplay~] to say 'don't walk' approx. half
+the time i press [bang[ \, and 'walk' the other half.;
+#X text 187 50 pd puzzler playback-3:;
+#X obj 48 57 random 2;
+#X floatatom 48 82 5 0 0 0 - - -;
+#X obj 50 106 select 0 1;
+#X obj 50 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 78 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 108 172 14500 36000;
+#X msg 35 173 0;
+#X connect 2 0 8 0;
+#X connect 4 0 0 0;
+#X connect 4 0 0 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 11 0 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 4 0;
+#X connect 14 0 4 0;

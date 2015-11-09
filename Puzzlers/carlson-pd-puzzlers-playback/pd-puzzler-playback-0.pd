@@ -1,0 +1,41 @@
+#N canvas 636 128 804 668 10;
+#X obj 38 262 dac~;
+#X obj 38 209 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 10 76 cnv 15 200 120 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 39 49 metro 250;
+#X msg 58 23 stop;
+#X obj 39 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 217 90 i want to play the [tabplay~] 4 times with the [metro]
+object \, then stop automatically.;
+#N canvas 347 126 469 166 init 0;
+#X obj 35 40 loadbang;
+#X obj 35 103 soundfiler;
+#X obj 337 42 table \$0-sample;
+#X obj 35 61 \$0;
+#X msg 35 82 read -resize data/standard-kit-3.aif \$1-sample;
+#X obj 35 124 s sampleLength;
+#X obj 92 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 3 0;
+#X connect 1 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 6 0 3 0;
+#X restore 495 22 pd init;
+#X obj 38 230 tabplay~ \$0-sample;
+#X text 217 70 pd puzzler playback-0:;
+#X obj 145 77 delay 1000;
+#X obj 58 -4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 8 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 5 0 10 0;
+#X connect 8 0 0 0;
+#X connect 8 0 0 1;
+#X connect 10 0 11 0;
+#X connect 11 0 4 0;

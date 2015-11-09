@@ -1,0 +1,48 @@
+#N canvas 383 43 847 455 16;
+#X obj 44 119 osc~;
+#X text 97 118 //sine tone generator (outputs -1 to 1);
+#X obj 607 283 print~;
+#X obj 607 248 metro 100;
+#X obj 607 226 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 44 91 5 0 0 0 - - -;
+#X obj 276 270 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 276 324 snapshot~;
+#X obj 276 358 print;
+#X obj 276 292 metro 40;
+#X obj 44 368 output~;
+#X obj 44 61 random 1000;
+#X obj 44 32 metro 100;
+#X obj 44 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 102 211 phasor~;
+#X floatatom 102 184 5 0 0 0 - - -;
+#X obj 102 241 *~ 2;
+#X obj 102 271 -~ 1;
+#X floatatom 179 270 5 0 0 0 - - -;
+#X obj 102 302 lop~ 800;
+#X obj 102 332 lop~ 800;
+#X text 380 319 //use [snapshot~] to take an incoming audio signal
+and sample it (bang) to output the value at control rate;
+#X text 187 213 //[phasor~] outputs between 0-1;
+#X text 103 92 //frequency input;
+#X connect 0 0 10 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;
+#X connect 11 0 5 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 0;
+#X connect 14 0 7 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 19 1;
+#X connect 18 0 20 1;
+#X connect 19 0 20 0;
+#X connect 20 0 10 1;
