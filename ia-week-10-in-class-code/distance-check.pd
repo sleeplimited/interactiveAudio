@@ -1,0 +1,18 @@
+#N canvas 560 150 450 300 10;
+#X msg 198 75 2 2;
+#X floatatom 192 180 5 0 0 0 - - -;
+#X obj 194 122 kdist 1 1;
+#X obj 284 76 cursor;
+#X obj 286 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 281 103 route motion;
+#X obj 280 130 route y x;
+#X obj 280 156 pack f f;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 2 0;

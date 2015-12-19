@@ -1,0 +1,7 @@
+#N canvas 205 381 578 256 16;
+#X text 75 -33 //a convenience object to quickly show an audio signal's
+values in a number box;
+#X obj 112 48 osc~ 0.1;
+#X obj 112 80 show~;
+#X connect 1 0 2 0;
+#X coords 0 256 1 255 65 28 0;

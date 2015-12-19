@@ -1,0 +1,36 @@
+#N canvas 0 23 718 433 16;
+#X obj 173 111 int;
+#X obj 213 111 + 1;
+#X obj 173 145 t f f;
+#X obj 109 72 t f b;
+#X obj 109 259 tabwrite resizeableArray;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array resizeableArray 174 float 1;
+#A 0 0 1 4 9 13 19 25 34 40 44 48 50 52 50 48 45 41 38 37 38 40 42
+43 44 43 42 39 38 37 36 37 39 41 42 41 39 36 34 35 37 39 37 35 34 35
+34 33 32 30 29 27 26 24 22 20 19 16 14 13 11 9 8 7 6 7 9 12 14 16 19
+21 22 24 26 29 30 33 36 40 43 47 50 53 57 59 60 59 55 50 48 46 45 47
+49 52 54 53 49 45 42 43 45 47 46 42 40 38 37 38 39 40 35 30 26 24 19
+17 15 14 13 12 11 9 10 11 12 11 10 8 9 11 15 17 20 21 19 14 10 6 9
+13 19 24 27 28 26 23 18 17 16 17 22 28 35 39 40 37 34 31 30 31 34 40
+46 50 54 53 51 49 48 50 53 55 54;
+#X coords 0 50 173 0 200 140 2 0 0;
+#X restore 478 33 graph;
+#X obj 113 17 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 218 75 1;
+#X msg 220 176 \; resizeableArray resize \$1;
+#X obj 489 301 list;
+#X floatatom 212 6 5 0 0 0 - - -;
+#X obj 219 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 0 1;
+#X connect 2 0 4 1;
+#X connect 2 1 8 0;
+#X connect 3 0 4 0;
+#X connect 3 1 0 0;
+#X connect 7 0 0 1;
+#X connect 10 0 11 0;
+#X connect 10 0 3 0;

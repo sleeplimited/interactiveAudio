@@ -1,0 +1,26 @@
+#N canvas 339 233 450 300 10;
+#X obj 133 177 * 6.28319;
+#X obj 133 157 / 360;
+#X floatatom 133 197 0 0 0 0 - - -;
+#X floatatom 133 134 0 0 0 0 - - -;
+#X obj 133 110 int;
+#X obj 164 111 + 1;
+#X obj 133 240 outlet;
+#X obj 130 38 loadbang;
+#X obj 134 61 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 133 83 metro 50;
+#X obj 133 217 * -1;
+#X obj 203 51 r expr-pedal-left-in;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 10 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 4 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 0;
+#X connect 10 0 6 0;
+#X connect 11 0 9 1;

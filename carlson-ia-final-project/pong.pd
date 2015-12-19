@@ -1,0 +1,10 @@
+#N canvas 529 106 450 300 16;
+#X obj 126 78 inlet~;
+#X obj 296 140 *~ 0.5;
+#X obj 126 168 delread~ pongArray;
+#X obj 126 111 delwrite~ pongArray 500;
+#X obj 126 207 outlet~;
+#X connect 0 0 3 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 0 4 0;
